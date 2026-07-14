@@ -1,0 +1,16 @@
+
+---
+
+## 🔹 SQL File Example (`queries.sql`)
+```sql
+-- Total Sales by Region
+SELECT region, SUM(sales) AS total_sales
+FROM sales_data
+GROUP BY region;
+
+-- Top 5 Products
+SELECT product_name, SUM(sales) AS total_sales
+FROM sales_data
+GROUP BY product_name
+ORDER BY total_sales DESC
+LIMIT 5;
